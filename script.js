@@ -24,7 +24,7 @@ function getRandomImage() {
 async function getRandomQuote() {
     try {
         // Вызов API для получения случайной цитаты
-        const response = await fetch('https://api.quotable.io/random');
+        const response = await fetch('http://api.quotable.io/random');
         if (!response.ok) {
             throw new Error('Error getting quote :(');
         }
@@ -41,7 +41,7 @@ async function getRandomQuote() {
 
     } catch (error) {
         // Обработка ошибок
-        document.getElementById('quote').innerText = 'Failed to load quote :(. Please try again.';
+        document.getElementById('quote').innerText = 'Failed to load quote :(. Please try again later.';
         console.error('Error:', error);
     }
 }
